@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  background: #ffe259; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffa751,
+    #ffe259
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffa751,
+    #ffe259
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.fas,
+.fa-keyboard {
+  margin-right: 0.5em;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.container {
+  margin-top: 8em;
+  margin-bottom: 8em;
+  padding: 5.5em;
+  width: 40%;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+.input-icons input {
+  padding-left: 40px;
+}
+
+.input-icons {
+  position: relative;
+}
+.input-icons i {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  padding: 3px 0 0 8px;
+  color: #a9a9a9;
+}
+
+@media screen and (max-width: 750px) and (min-width: 601px) {
+  .container {
+    padding: 4em;
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 600px) and (min-width: 301px) {
+  .container {
+    padding: 3em;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .container {
+    padding: 1em;
+    width: 70%;
+  }
+}

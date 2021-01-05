@@ -20,24 +20,74 @@
   </head>
   <body>
     <div class="container">
-      <form action="">
-        <div class="form-floating mb-3">
-          <input
-            type="email"
-            class="form-control"
-            id="floatingInput"
-            placeholder="name@example.com"
-          />
-          <label for="floatingInput">Email address</label>
+      <h2 class="title"><i class="fas fa-keyboard"></i>Register</h2>
+      <form id="form">
+        <div class="mb-3">
+          <label for="fullName" class="form-label">Full Name</label>
+          <div class="input-icons">
+            <input
+              type="text"
+              class="form-control"
+              id="fullName"
+              name="fullName"
+              placeholder="Full Name"
+            />
+            <i class="fas fa-user" aria-hidden="true"></i>
+          </div>
         </div>
-        <div class="form-floating">
-          <input
-            type="password"
-            class="form-control"
-            id="floatingPassword"
-            placeholder="Password"
-          />
-          <label for="floatingPassword">Password</label>
+        <div class="mb-3">
+          <label for="phoneNumber" class="form-label">Phone Number</label>
+          <div class="input-icons">
+            <input
+              type="tel"
+              class="form-control"
+              id="phoneNumber"
+              placeholder="Phone Number"
+            />
+            <i class="fas fa-phone-square-alt"></i>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <div class="input-icons">
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Email Address"
+            />
+            <i class="fas fa-envelope-square"></i>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <div class="input-icons">
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Password"
+            />
+            <i class="fas fa-lock"></i>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="confirmPassword" class="form-label"
+            >Confirm Password</label
+          >
+          <div class="input-icons">
+            <input
+              type="password"
+              class="form-control"
+              id="confirmPassword"
+              placeholder="Confirm Password"
+            />
+            <i class="fas fa-lock"></i>
+          </div>
+        </div>
+        <div class="d-grid gap-2">
+          <button type="button" class="btn btn-dark btn-lg">Register!</button>
         </div>
       </form>
     </div>
