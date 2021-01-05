@@ -20,76 +20,98 @@
   </head>
   <body>
     <div class="container">
-      <h2 class="title"><i class="fas fa-keyboard"></i>Register</h2>
+      <h2 class="title">Sign Up!</h2>
       <form id="form">
+        <!-- Full Name -->
         <div class="mb-3">
           <label for="fullName" class="form-label">Full Name</label>
           <div class="input-icons">
             <input
               type="text"
-              class="form-control"
+              class="form-input"
               id="fullName"
               name="fullName"
               placeholder="Full Name"
+              required
+              minlength="3"
+              maxlength="100"
             />
             <i class="fas fa-user" aria-hidden="true"></i>
           </div>
         </div>
+        <!-- Phone number -->
         <div class="mb-3">
-          <label for="phoneNumber" class="form-label">Phone Number</label>
+          <label for="phone" class="form-label">Phone Number</label>
           <div class="input-icons">
             <input
               type="tel"
-              class="form-control"
-              id="phoneNumber"
-              placeholder="Phone Number"
+              class="form-input"
+              id="phone"
+              placeholder="999-999-9999"
+              required
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
             />
             <i class="fas fa-phone-square-alt"></i>
           </div>
         </div>
-
+        <!-- Email address -->
         <div class="mb-3">
           <label for="email" class="form-label">Email Address</label>
           <div class="input-icons">
             <input
               type="email"
-              class="form-control"
+              class="form-input"
               id="email"
-              placeholder="Email Address"
+              placeholder="email@address.com"
+              required
             />
             <i class="fas fa-envelope-square"></i>
           </div>
         </div>
+        <!-- Create Password -->
         <div class="mb-3">
-          <label for="password" class="form-label">Password</label>
+          <label for="password1" class="form-label">Password</label>
           <div class="input-icons">
             <input
               type="password"
-              class="form-control"
-              id="password"
-              placeholder="Password"
+              class="form-input shadow-none"
+              id="password1"
+              placeholder="Create Password (minimum 8 characters)"
+              required
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}"
+              title="Please include at least 1 uppercase, 1 lowercase and 1 number and minimum 8 characters long"
             />
             <i class="fas fa-lock"></i>
           </div>
         </div>
+        <!-- Confirm Password -->
         <div class="mb-3">
-          <label for="confirmPassword" class="form-label"
-            >Confirm Password</label
-          >
+          <label for="password2" class="form-label">Confirm Password</label>
           <div class="input-icons">
             <input
               type="password"
-              class="form-control"
-              id="confirmPassword"
+              class="form-input"
+              id="password2"
               placeholder="Confirm Password"
+              required
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}"
             />
             <i class="fas fa-lock"></i>
           </div>
         </div>
         <div class="d-grid gap-2">
-          <button type="button" class="btn btn-dark btn-lg">Register!</button>
+          <!-- Register Button -->
+          <button type="submit" class="btn btn-dark btn-lg">Register!</button>
+          <!-- Error/Success Message -->
+          <button type="button" class="btn btn-light btn-lg" id="message">
+            Go Ahead!
+          </button>
         </div>
       </form>
+      <!-- Error/Success Message -->
+      <!-- <div class="message-container">
+        <h3 id="message">Go Ahead!</h3>
+      </div> -->
     </div>
     <script src="script.js"></script>
   </body>
